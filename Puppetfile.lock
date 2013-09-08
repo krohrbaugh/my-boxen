@@ -39,6 +39,11 @@ GITHUBTARBALL
     hub (1.3.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-keyremap4macbook
+  specs:
+    keyremap4macbook (1.0.4)
+
+GITHUBTARBALL
   remote: boxen/puppet-nginx
   specs:
     nginx (1.4.3)

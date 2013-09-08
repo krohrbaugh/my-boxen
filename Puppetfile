@@ -59,7 +59,8 @@ github "xquartz",     "1.1.1"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
-github "osx",            "1.6.0"
-github "zsh",            "1.0.0"
-github "textmate",       "1.1.0"
-github "sublime_text_2", "1.1.2"
+github "osx",                 "1.6.0"
+github "zsh",                 "1.0.0"
+github "textmate",            "1.1.0"
+github "sublime_text_2",      "1.1.2"
+github "keyremap4macbook",    "1.0.4"
