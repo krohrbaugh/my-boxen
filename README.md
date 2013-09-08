@@ -51,7 +51,7 @@ script/boxen --srcdir=/Users/<username>/Code
 
 _NOTE:_ The `--srcdir` setting is only necessary if you choose to use a different path than Boxen's `~/src` for repositories.
 
-_NOTE:_ By default, Boxen required full-disk encryption to be enabled, which is probably a good idea. To skip this, use the `--no-fde` flag.
+_NOTE:_ By default, Boxen requires full-disk encryption to be enabled, which is probably a good idea. To skip this, use the `--no-fde` flag.
 
 ``` sh
 script/boxen --no-fde
