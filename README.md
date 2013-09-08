@@ -1,18 +1,12 @@
 # Our Boxen
 
-This is a template Boxen project designed for your organization to fork and
-modify appropriately.
-The Boxen rubygem and the Boxen puppet modules are only a framework for getting
-things done.
-This repository template is just a basic example of _how_ to do things with them.
+My personal Boxen configuration, used for managing my personal laptop(s). Because life's too short to spend it installing software.
+
+This is a fairly straight-forward Boxen project, with most of the interesting bits in my personal manifest: `modules/people/manifests/krohrbaugh.pp`.
 
 ## Getting Started
 
-To give you a brief overview, we're going to:
-
-* Install dependencies (basically Xcode)
-* Bootstrap a boxen for your self/team/org/company
-* Then convert your local copy of that boxen to the post-bootstrapped version
+See the [our-boxen sample repository][our-boxen] for more details on getting started with Boxen in general.
 
 There are a few potential conflicts to keep in mind.
 Boxen does its best not to get in the way of a dirty system,
@@ -51,28 +45,19 @@ Otherwise, follow instructions below.
 1. Go to the Downloads tab.
 1. Install the Command Line Tools.
 
-### Bootstrapping
+### Installing
 
-Create a **new** git repository somewhere on the internet.
-It can be private or public -- it really doesn't matter.
-If you're making a repository on GitHub, you _may not_ want to fork this repo
-to get started.
-The reason for that is that you can't really make private forks of public
-repositories easily.
+Install the boxen on a host machine:
 
-Once you've done that, you can run the following to bootstrap
-your boxen:
-
-```
+``` sh
 sudo mkdir -p /opt/boxen
 sudo chown ${USER}:staff /opt/boxen
-git clone https://github.com/boxen/our-boxen /opt/boxen/repo
+git clone https://github.com/krohrbaugh/my-boxen /opt/boxen/repo
 cd /opt/boxen/repo
-git remote rm origin
-git remote add origin <the location of my new git repository>
-git push -u origin master
+script/boxen --srcdir=/Users/<username>/Code
 ```
 
+<<<<<<< HEAD
 Now that your boxen is bootstrapped, you can run the following to
 install the default configuration from this repo:
 
@@ -98,11 +83,11 @@ git clone <location of my new git repository> /opt/boxen/repo
 cd /opt/boxen/repo
 ./script/boxen
 ```
+_NOTE:_ The `--srcdir` setting is only necessary if you choose to use a different path than Boxen's `~/src` for repositories.
 
-Keep in mind this requires you to encrypt your hard drive by default.
-If you do not want to do encrypt your hard drive, you can use the `--no-fde`.
+_NOTE:_ By default, Boxen required full-disk encryption to be enabled, which is probably a good idea. To skip this, use the `--no-fde` flag.
 
-```
+``` sh
 ./script/boxen --no-fde
 ```
 
@@ -120,27 +105,6 @@ If you do have a `~/.bashrc` or `~/.zshrc`, your shell will not use
 Once your shell is ready, open a new tab/window in your Terminal
 and you should be able to successfully run `boxen --env`.
 If that runs cleanly, you're in good shape.
-
-## What You Get
-
-This template project provides the following by default:
-
-* Homebrew
-* Git
-* Hub
-* dnsmasq w/ .dev resolver for localhost
-* rbenv
-* Full Disk Encryption requirement
-* Node.js 0.6
-* Node.js 0.8
-* Node.js 0.10
-* Ruby 1.9.3
-* Ruby 2.0.0
-* Ruby 2.1.0
-* Ruby 2.1.1
-* ack
-* Findutils
-* GNU tar
 
 ## Customizing
 
