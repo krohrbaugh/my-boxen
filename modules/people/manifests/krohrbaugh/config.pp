@@ -17,5 +17,6 @@ class people::krohrbaugh::config {
     require => File[$my_dir],
   }
 
+  include people::krohrbaugh::config::machine
   include people::krohrbaugh::config::shell
 }
