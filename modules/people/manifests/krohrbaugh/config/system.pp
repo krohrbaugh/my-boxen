@@ -1,11 +1,11 @@
-class people::krohrbaugh::config::machine {
+class people::krohrbaugh::config::system {
   require people::krohrbaugh::config
 
-  # NOTE: The following command depends on the `set-defaults.sh` script setting
-  # a key used only to signal to Puppet that defaults were executed on the host.
-  # It'd be better to set these defaults here, but the puppet-osx module doesn't
-  # have near as many settings as the script and transcribing them all over
-  # would take a _long_ time.
+  # NOTE: The following `exec` command depends on the `set-defaults.sh` script
+  # setting a key used only to signal to Puppet that defaults were executed on
+  # the host. It'd be better to set these defaults here, but the puppet-osx
+  # module doesn't have near as many settings as the script and transcribing
+  # them all over would take a _long_ time.
   #
   # In order for this to run again via Boxen, it's necessary to delete the 
   # `us.rohrbaugh.osx-defaults/enabled` key from `defaults`:
@@ -19,6 +19,7 @@ class people::krohrbaugh::config::machine {
     cwd       => $people::krohrbaugh::config::dotfiles_dir,
     unless    => "/usr/bin/defaults read us.rohrbaugh.osx-defaults enabled | grep 1",
     user      => $::boxen_user,
+    require   => Repository[$people::krohrbaugh::config::dotfiles_dir],
   }
 
   # Boxen resource over-ride: leave my settings alone, please.
