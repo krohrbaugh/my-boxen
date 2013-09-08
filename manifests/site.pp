@@ -75,13 +75,10 @@ node default {
   package {
     [
       'ack',
+      'cloc',
       'findutils',
-      'gnu-tar'
+      'gnu-tar',
+      'tree'
     ]:
-  }
-
-  file { "${boxen::config::srcdir}/personal/my-boxen":
-    ensure => link,
-    target => $boxen::config::repodir
   }
 }
