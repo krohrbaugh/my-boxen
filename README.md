@@ -1,4 +1,4 @@
-# Our Boxen
+# My Boxen
 
 My personal Boxen configuration, used for managing my personal laptop(s). Because life's too short to spend it installing software.
 
