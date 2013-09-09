@@ -9,6 +9,7 @@ class people::krohrbaugh::applications::development {
     make_default => false,
   }
 
+  include pgadmin3
   include rubymine
   include tower
 
