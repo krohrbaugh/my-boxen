@@ -4,6 +4,11 @@ GITHUBTARBALL
     adium (1.1.1)
 
 GITHUBTARBALL
+  remote: boxen/puppet-alfred
+  specs:
+    alfred (1.1.2)
+
+GITHUBTARBALL
   remote: boxen/puppet-appcleaner
   specs:
     appcleaner (1.0.0)
@@ -22,6 +27,11 @@ GITHUBTARBALL
   remote: boxen/puppet-dnsmasq
   specs:
     dnsmasq (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-dropbox
+  specs:
+    dropbox (1.1.1)
 
 GITHUBTARBALL
   remote: boxen/puppet-gcc
@@ -62,6 +72,11 @@ GITHUBTARBALL
   remote: boxen/puppet-nodejs
   specs:
     nodejs (3.2.9)
+
+GITHUBTARBALL
+  remote: boxen/puppet-onepassword
+  specs:
+    onepassword (1.0.2)
 
 GITHUBTARBALL
   remote: boxen/puppet-openssl
@@ -130,10 +145,12 @@ GITHUBTARBALL
 
 DEPENDENCIES
   adium (= 1.1.1)
+  alfred (= 1.1.2)
   appcleaner (= 1.0.0)
   autoconf (= 1.0.0)
   boxen (= 3.0.2)
   dnsmasq (= 1.0.0)
+  dropbox (= 1.1.1)
   gcc (= 2.0.1)
   git (= 1.2.5)
   homebrew (= 1.4.1)
@@ -143,6 +160,7 @@ DEPENDENCIES
   keyremap4macbook (= 1.0.4)
   nginx (= 1.4.2)
   nodejs (= 3.2.9)
+  onepassword (= 1.0.2)
   openssl (= 1.0.0)
   osx (= 1.6.0)
   rdio (= 1.0.0)
