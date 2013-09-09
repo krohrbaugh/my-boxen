@@ -61,9 +61,12 @@ github "xquartz",     "1.1.1"
 # https://github.com/boxen.
 
 github "adium",               "1.1.1"
+github "alfred",              "1.1.2"
 github "appcleaner",          "1.0.0"
+github "dropbox",             "1.1.1"
 github "iterm2",              "1.0.3"
 github "keyremap4macbook",    "1.0.4"
+github "onepassword",         "1.0.2"
 github "osx",                 "1.6.0"
 github "rdio",                "1.0.0"
 github "spectacle",           "1.0.0"
