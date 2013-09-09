@@ -1,25 +1,32 @@
 class people::krohrbaugh::config::system {
   require people::krohrbaugh::config
 
-  # NOTE: The following `exec` command depends on the `set-defaults.sh` script
-  # setting a key used only to signal to Puppet that defaults were executed on
-  # the host. It'd be better to set these defaults here, but the puppet-osx
-  # module doesn't have near as many settings as the script and transcribing
-  # them all over would take a _long_ time.
+  # Set OSX defaults using a shell script in dotfiles. The puppet-osx module
+  # doesn't have near as many settings and transcribing them all over would take
+  # a _long_ time.
   #
-  # In order for this to run again via Boxen, it's necessary to delete the 
-  # `us.rohrbaugh.osx-defaults/enabled` key:
+  # NOTE: This uses a plist-backed receipt to prevent the resource from
+  # executing with every Boxen run. In order to re-run it on a machine:
   #
-  #   defaults delete us.rohrbaugh.osx-defaults enabled
-  # 
-  # It's brittle, but it works.
+  #   defaults delete us.rohrbaugh.boxen OSXDefaults
+  #
+  # There's probably a better way to do this . . .
+  $unless_cmd = "/usr/bin/defaults read us.rohrbaugh.boxen OSXDefaults | grep 1"
   exec { "set OSX defaults":
     provider  => shell,
     command   => "./osx/set-defaults.sh",
     cwd       => $people::krohrbaugh::config::dotfiles_dir,
-    unless    => "/usr/bin/defaults read us.rohrbaugh.osx-defaults enabled | grep 1",
+    unless    => $unless_cmd,
     user      => $::boxen_user,
     require   => Repository[$people::krohrbaugh::config::dotfiles_dir],
+  }
+  ->
+  exec { "write osx-defaults receipt":
+    provider  => shell,
+    command   => "defaults write us.rohrbaugh.boxen OSXDefaults -bool true",
+    cwd       => $people::krohrbaugh::config::home_dir,
+    user      => $::boxen_user,
+    unless    => $unless_cmd,
   }
 
   # Boxen resource over-ride: leave my settings alone, please.
