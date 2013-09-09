@@ -8,7 +8,7 @@ class people::krohrbaugh::config::system {
   # them all over would take a _long_ time.
   #
   # In order for this to run again via Boxen, it's necessary to delete the 
-  # `us.rohrbaugh.osx-defaults/enabled` key from `defaults`:
+  # `us.rohrbaugh.osx-defaults/enabled` key:
   #
   #   defaults delete us.rohrbaugh.osx-defaults enabled
   # 

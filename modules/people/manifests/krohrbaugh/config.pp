@@ -2,7 +2,9 @@ class people::krohrbaugh::config {
   $home_dir = "/Users/${::boxen_user}"
   $my_dir = "${boxen::config::srcdir}/my"
   $dotfiles_dir = "${my_dir}/dotfiles"
+
   $fonts_dir = "${home_dir}/Library/Fonts"
+  $preferences_dir = "${home_dir}/Library/Preferences"
 
   file { $my_dir:
     owner   => $::boxen_user,
