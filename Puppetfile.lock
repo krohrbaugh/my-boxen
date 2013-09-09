@@ -1,4 +1,9 @@
 GITHUBTARBALL
+  remote: boxen/puppet-appcleaner
+  specs:
+    appcleaner (1.0.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-autoconf
   specs:
     autoconf (1.0.0)
@@ -32,6 +37,11 @@ GITHUBTARBALL
   remote: boxen/puppet-hub
   specs:
     hub (1.0.3)
+
+GITHUBTARBALL
+  remote: boxen/puppet-iterm2
+  specs:
+    iterm2 (1.0.3)
 
 GITHUBTARBALL
   remote: boxen/puppet-keyremap4macbook
@@ -104,6 +114,7 @@ GITHUBTARBALL
     stdlib (4.1.0)
 
 DEPENDENCIES
+  appcleaner (= 1.0.0)
   autoconf (= 1.0.0)
   boxen (= 3.0.2)
   dnsmasq (= 1.0.0)
@@ -112,6 +123,7 @@ DEPENDENCIES
   homebrew (= 1.4.1)
   hub (= 1.0.3)
   inifile (= 1.0.0)
+  iterm2 (= 1.0.3)
   keyremap4macbook (= 1.0.4)
   nginx (= 1.4.2)
   nodejs (= 3.2.9)
