@@ -48,7 +48,7 @@ class people::krohrbaugh::config::keyboard {
       unless    => $unless_cmd,
       onlyif    => $onlyif_cmd,
       require   => [
-        Package["KeyRemap4MacBook"],
+        Package["KeyRemap4MacBook_${keyremap4macbook::config::version}"],
         KeyRemap4MacBook::Private_xml["private.xml"],
       ],
     }
