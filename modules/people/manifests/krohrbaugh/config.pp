@@ -20,7 +20,7 @@ class people::krohrbaugh::config {
     require => File[$my_dir],
   }
 
-  include people::krohrbaugh::config::system
+  # include people::krohrbaugh::config::system
   include people::krohrbaugh::config::keyboard
   include people::krohrbaugh::config::shell
 }
