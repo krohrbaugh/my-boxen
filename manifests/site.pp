@@ -71,6 +71,9 @@ node default {
   include ruby::1_9_3
   include ruby::2_0_0
 
+  # java
+  include java
+
   # common, useful packages
   package {
     [
