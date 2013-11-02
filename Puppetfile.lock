@@ -29,6 +29,11 @@ GITHUBTARBALL
     chrome (1.1.1)
 
 GITHUBTARBALL
+  remote: boxen/puppet-crashplan
+  specs:
+    crashplan (1.0.1)
+
+GITHUBTARBALL
   remote: boxen/puppet-dnsmasq
   specs:
     dnsmasq (1.0.0)
@@ -215,6 +220,7 @@ DEPENDENCIES
   autoconf (= 1.0.0)
   boxen (= 3.3.3)
   chrome (= 1.1.1)
+  crashplan (= 1.0.1)
   dnsmasq (= 1.0.0)
   dropbox (= 1.1.2)
   firefox (= 1.1.4)
