@@ -72,6 +72,21 @@ Once your shell is ready, open a new tab/window in your Terminal
 and you should be able to successfully run `boxen --env`.
 If that runs cleanly, you're in good shape.
 
+### Updating
+
+Typically, there are two aspects to updating Boxen: updating Ruby libraries in the `Gemfile` and updating Puppet modules in the `Puppetfile`.
+
+To update Ruby libraries, modify the `Gemfile` and then run `script/bootstrap`.
+
+To determine what Puppet modules are out of date, first export your Github API token, so that `librarian-puppet` can use it. Boxen stores the token in your Keychain, under "Github API Token". Find it and run:
+
+```sh
+export GITHUB_API_TOKEN={token-from-keychain}
+bundle exec librarian-puppet outdated
+```
+
+This will list the outdated Puppet modules. Update the `Puppetfile` with whatever modules you wish to update and run `boxen`.
+
 ## Customizing
 
 You can always check out the number of existing modules we already
