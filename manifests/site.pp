@@ -66,10 +66,16 @@ node default {
   # node versions
   include nodejs::v0_10
 
-  # default ruby versions
-  include ruby::1_8_7
-  include ruby::1_9_3
-  include ruby::2_0_0
+  # ruby versions and gems
+  $rb_versions = [ '2.1.0', '2.0.0', '1.9.3', ]
+  each($rb_versions) |$rb_version| {
+    ruby::version { "${rb_version}": }
+
+    ruby::gem { "rake for ${rb_version}":
+      gem   => 'rake',
+      ruby  => $rb_version
+    }
+  }
 
   # java
   include java

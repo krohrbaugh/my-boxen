@@ -46,7 +46,7 @@ sudo mkdir -p /opt/boxen
 sudo chown ${USER}:staff /opt/boxen
 git clone https://github.com/krohrbaugh/my-boxen /opt/boxen/repo
 cd /opt/boxen/repo
-script/boxen --srcdir=/Users/<username>/Code
+script/boxen --srcdir=/Users/<username>/Code --future-parser
 ```
 
 _NOTE:_ The `--srcdir` setting is only necessary if you choose to use a different path than Boxen's `~/src` for repositories.
@@ -54,7 +54,7 @@ _NOTE:_ The `--srcdir` setting is only necessary if you choose to use a differen
 _NOTE:_ By default, Boxen requires full-disk encryption to be enabled, which is probably a good idea. To skip this, use the `--no-fde` flag.
 
 ``` sh
-script/boxen --no-fde
+script/boxen --no-fde --future-parser
 ```
 
 It should run successfully, and should tell you to source a shell script
@@ -85,7 +85,7 @@ export GITHUB_API_TOKEN={token-from-keychain}
 bundle exec librarian-puppet outdated
 ```
 
-This will list the outdated Puppet modules. Update the `Puppetfile` with whatever modules you wish to update and run `boxen`.
+This will list the outdated Puppet modules. Update the `Puppetfile` with whatever modules you wish to update and run `boxen --future-parser`.
 
 ## Customizing
 
