@@ -6,4 +6,5 @@ class people::krohrbaugh::applications::utilities {
   include notational_velocity::nvalt
   include onepassword
   include spectacle
+  include transmit
 }

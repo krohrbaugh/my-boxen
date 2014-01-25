@@ -21,7 +21,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-boxen
   specs:
-    boxen (3.3.5)
+    boxen (3.3.8)
 
 GITHUBTARBALL
   remote: boxen/puppet-chrome
@@ -66,7 +66,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-hub
   specs:
-    hub (1.2.0)
+    hub (1.3.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-intellij
@@ -146,7 +146,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-ruby
   specs:
-    ruby (7.0.1)
+    ruby (7.1.6)
 
 GITHUBTARBALL
   remote: boxen/puppet-rubymine
@@ -189,6 +189,11 @@ GITHUBTARBALL
     tower (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-transmit
+  specs:
+    transmit (1.0.2)
+
+GITHUBTARBALL
   remote: boxen/puppet-xquartz
   specs:
     xquartz (1.1.1)
@@ -218,7 +223,7 @@ DEPENDENCIES
   alfred (= 1.1.7)
   appcleaner (= 1.0.0)
   autoconf (= 1.0.0)
-  boxen (= 3.3.5)
+  boxen (= 3.3.8)
   chrome (= 1.1.2)
   crashplan (= 1.0.1)
   dnsmasq (= 1.0.1)
@@ -227,7 +232,7 @@ DEPENDENCIES
   gcc (= 2.0.99)
   git (= 1.3.7)
   homebrew (= 1.6.0)
-  hub (= 1.2.0)
+  hub (= 1.3.0)
   inifile (= 1.0.0)
   intellij (= 1.4.0)
   istatmenus4 (= 1.1.0)
@@ -245,7 +250,7 @@ DEPENDENCIES
   pgadmin3 (= 1.0.0)
   rdio (= 1.0.0)
   repository (= 2.2.0)
-  ruby (= 7.0.1)
+  ruby (= 7.1.6)
   rubymine (= 1.1.0)
   skype (= 1.0.8)
   spectacle (= 1.0.0)
@@ -255,6 +260,7 @@ DEPENDENCIES
   teamviewer (= 1.0.1)
   textmate (= 1.1.0)
   tower (= 1.0.0)
+  transmit (= 1.0.2)
   xquartz (= 1.1.1)
   zsh (= 1.0.0)
 
