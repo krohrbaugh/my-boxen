@@ -66,6 +66,9 @@ node default {
   # node versions
   include nodejs::v0_10
 
+  # python
+  include python
+
   # ruby versions and gems
   $rb_versions = [ '2.1.0', '2.0.0', '1.9.3', ]
   each($rb_versions) |$rb_version| {
