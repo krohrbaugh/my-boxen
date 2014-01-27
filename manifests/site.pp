@@ -70,6 +70,9 @@ node default {
   include ruby::1_9_3
   include ruby::2_1_1
 
+  # python
+  include python
+
   # java
   include java
 
