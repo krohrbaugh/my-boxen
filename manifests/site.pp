@@ -70,7 +70,7 @@ node default {
   include python
 
   # ruby versions and gems
-  $rb_versions = [ '2.1.0', '2.0.0', '1.9.3', ]
+  $rb_versions = [ '2.1.0', '2.0.0-p353', '1.9.3-p484', ]
   each($rb_versions) |$rb_version| {
     ruby::version { "${rb_version}": }
 
