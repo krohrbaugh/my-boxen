@@ -10,6 +10,7 @@ class people::krohrbaugh::applications::development {
   }
 
   include pgadmin3
+  include sequel_pro
   include rubymine
   include tower
 
