@@ -57,7 +57,6 @@ cd /opt/boxen/repo
 script/boxen --srcdir=/Users/<username>/Code --future-parser
 ```
 
-<<<<<<< HEAD
 Now that your boxen is bootstrapped, you can run the following to
 install the default configuration from this repo:
 
