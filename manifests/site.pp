@@ -67,8 +67,8 @@ node default {
   include nodejs::v0_10
 
   # default ruby versions
-  include ruby::1_9_3
-  include ruby::2_1_1
+  ruby::version { '1.9.3': }
+  ruby::version { '2.1.2': }
 
   # python
   include python

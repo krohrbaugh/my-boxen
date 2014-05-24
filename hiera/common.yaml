@@ -1,0 +1,12 @@
+---
+# See https://github.com/boxen/puppet-ruby for docs
+ruby::rbenv_plugins:
+  rbenv-vars:
+    ensure: v1.2.0
+    source: sstephenson/rbenv-vars
+  ruby-build:
+    ensure: v20140517
+    source: sstephenson/ruby-build
+
+# See https://github.com/boxen/puppet-java for docs
+java::update_version: 55

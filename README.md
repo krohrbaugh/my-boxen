@@ -121,6 +121,9 @@ bundle exec librarian-puppet outdated
 
 This will list the outdated Puppet modules. Update the `Puppetfile` with whatever modules you wish to update and run `boxen --future-parser`.
 
+_NOTE:_ It's safest to only update modules in the optional/custom part of the
+`Puppetfile` and to pull core module updates from `upstream`.
+
 ## Customizing
 
 You can always check out the number of existing modules we already
