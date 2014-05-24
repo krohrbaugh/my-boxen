@@ -31,6 +31,14 @@ MacVim.
 
 How do you do it?
 
+#### OS X 10.9 (Mavericks)
+
+If you are using [`b26abd0` of boxen-web](https://github.com/boxen/boxen-web/commit/b26abd0d681129eba0b5f46ed43110d873d8fdc2)
+or newer, it will be automatically installed as part of Boxen.
+Otherwise, follow instructions below.
+
+#### OS X < 10.9
+
 1. Install Xcode from the Mac App Store.
 1. Open Xcode.
 1. Open the Preferences window (`Cmd-,`).
@@ -49,6 +57,32 @@ cd /opt/boxen/repo
 script/boxen --srcdir=/Users/<username>/Code --future-parser
 ```
 
+<<<<<<< HEAD
+Now that your boxen is bootstrapped, you can run the following to
+install the default configuration from this repo:
+
+```
+cd /opt/boxen/repo
+./script/boxen
+```
+
+### Distributing
+
+That's enough to get your boxen into a usable state on other machines,
+usually.
+From there, we recommend setting up
+[boxen-web](https://github.com/boxen/boxen-web)
+as an easy way to automate letting other folks install your boxen.
+
+If you _don't_ want to use boxen-web, folks can get using your boxen like so:
+
+```
+sudo mkdir -p /opt/boxen
+sudo chown ${USER}:staff /opt/boxen
+git clone <location of my new git repository> /opt/boxen/repo
+cd /opt/boxen/repo
+./script/boxen
+```
 _NOTE:_ The `--srcdir` setting is only necessary if you choose to use a different path than Boxen's `~/src` for repositories.
 
 _NOTE:_ By default, Boxen requires full-disk encryption to be enabled, which is probably a good idea. To skip this, use the `--no-fde` flag.
@@ -86,6 +120,9 @@ bundle exec librarian-puppet outdated
 ```
 
 This will list the outdated Puppet modules. Update the `Puppetfile` with whatever modules you wish to update and run `boxen --future-parser`.
+
+_NOTE:_ It's safest to only update modules in the optional/custom part of the
+`Puppetfile` and to pull core module updates from `upstream`.
 
 ## Customizing
 
@@ -138,6 +175,32 @@ Now Puppet knows where to download the module from when you include it in your s
     # github "java",     "1.1.0"
     include java
 
+### Hiera
+
+Hiera is preferred mechanism to make changes to module defaults (e.g. default
+global ruby version, service ports, etc). This repository supplies a
+starting point for your Hiera configuration at `config/hiera.yml`, and an
+example data file at `hiera/common.yaml`. See those files for more details.
+
+The default `config/hiera.yml` is configured with a hierarchy that allows
+individuals to have their own hiera data file in
+`hiera/users/{github_login}.yaml` which augments and overrides
+site-wide values in `hiera/common.yaml`. This default is, as with most of the
+configuration in the example repo, a great starting point for many
+organisations, but is totally up to you. You might want to, for
+example, have a set of values that can't be overridden by adding a file to
+the top of the hierarchy, or to have values set on specific OS
+versions:
+
+```yaml
+# ...
+:hierarchy:
+  - "global-overrides.yaml"
+  - "users/%{::github_login}"
+  - "osx-%{::macosx_productversion_major}"
+  - common
+```
+
 ### Node definitions
 
 Puppet has the concept of a
@@ -179,7 +242,7 @@ everyone by default. An example of this might look like so:
 
    include projects::super-top-secret-project
  }
- ```
+```
 
  If you'd like to read more about how Puppet works, we recommend
  checking out [the official documentation](http://docs.puppetlabs.com/)
@@ -220,11 +283,14 @@ fork.
 You'll still be the maintainer, you'll still own the issues and PRs.
 It'll just be listed under the boxen org so folks can find it more easily.
 
+##upgrading boxen
+See [FAQ-Upgrading](https://github.com/boxen/our-boxen/blob/master/docs/faq.md#q-how-do-you-upgrade-your-boxen-from-the-public-our-boxen).
+
 ## Integrating with Github Enterprise
 
 If you're using a Github Enterprise instance rather than github.com,
-you will need to set the "BOXEN_GITHUB_ENTERPRISE_URL" and
-"BOXEN_REPO_URL_TEMPLATE" variables in your
+you will need to set the `BOXEN_GITHUB_ENTERPRISE_URL` and
+`BOXEN_REPO_URL_TEMPLATE` variables in your
 [Boxen config](config/boxen.rb).
 
 ## Halp!
