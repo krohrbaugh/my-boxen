@@ -76,6 +76,20 @@ node default {
   # java
   include java
 
+  # go
+  include go
+
+  # Delete wfarr/chgo if it exists, since repository type does not distinguish
+  # when remote changes: https://github.com/boxen/puppet-go/pull/11
+  exec { "delete-wfarr-chgo":
+      provider => shell,
+      command  => "rm -rf ${boxen::config::home}/chgo",
+      onlyif   => "[[ -s ${boxen::config::home}/chgo ]] && cd ${boxen::config::home}/chgo && git remote -v | grep wfarr",
+      before   => Repository[$go::chgo_root],
+  }
+
+  go::version { '1.3.1': }
+
   # common, useful packages
   package {
     [

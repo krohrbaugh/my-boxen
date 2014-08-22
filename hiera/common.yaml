@@ -10,3 +10,7 @@ ruby::rbenv_plugins:
 
 # See https://github.com/boxen/puppet-java for docs
 java::update_version: 55
+
+# Support latest golang versions: https://github.com/boxen/puppet-go/pull/11
+go::chgo_source: "mattheath/chgo"
+go::chgo_version: "3f0fb76a1eea09263011e3ad7d165bc525326de7"
