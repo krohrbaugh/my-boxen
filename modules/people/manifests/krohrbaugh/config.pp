@@ -23,4 +23,5 @@ class people::krohrbaugh::config {
   include people::krohrbaugh::config::system
   include people::krohrbaugh::config::keyboard
   include people::krohrbaugh::config::shell
+  include people::krohrbaugh::config::golang
 }
