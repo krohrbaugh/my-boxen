@@ -4,6 +4,13 @@ class people::krohrbaugh::config::golang {
   $go_pkg = "${go_dir}/pkg"
   $go_src = "${go_dir}/src"
 
+  file { $go_dir:
+    owner   => $::boxen_user,
+    group   => staff,
+    ensure  => directory,
+    recurse => true,
+  }
+
   file { $go_bin:
     owner   => $::boxen_user,
     group   => staff,
