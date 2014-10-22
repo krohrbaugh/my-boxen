@@ -1,15 +1,10 @@
 ---
 # See https://github.com/boxen/puppet-ruby for docs
-ruby::rbenv_plugins:
-  rbenv-vars:
-    ensure: v1.2.0
-    source: sstephenson/rbenv-vars
-  ruby-build:
-    ensure: v20140517
-    source: sstephenson/ruby-build
+ruby::provider: 'chruby'
+ruby::build::ensure: 'v20141016'
 
 # See https://github.com/boxen/puppet-java for docs
-java::update_version: 55
+java::update_version: 71
 
 # Support latest golang versions: https://github.com/boxen/puppet-go/pull/11
 go::chgo_source: "mattheath/chgo"
