@@ -118,7 +118,7 @@ export GITHUB_API_TOKEN={token-from-keychain}
 bundle exec librarian-puppet outdated
 ```
 
-This will list the outdated Puppet modules. Update the `Puppetfile` with whatever modules you wish to update and run `boxen --future-parser`.
+This will list the outdated Puppet modules. Update the `Puppetfile` with whatever modules you wish to update and run `boxen`.
 
 _NOTE:_ It's safest to only update modules in the optional/custom part of the
 `Puppetfile` and to pull core module updates from `upstream`.
@@ -155,11 +155,11 @@ boxen repo (ex. /path/to/your-boxen/Puppetfile):
     # Optional/custom modules. There are tons available at
     # https://github.com/boxen.
 
-    github "java",     "1.1.0"
+    github "java",     "1.6.0"
 
 In the above snippet of a customized Puppetfile, the bottom line
-includes the Java module from Github using the tag "1.1.0" from the github repository
-"boxen/puppet-java".  The function "github" is defined at the top of the Puppetfile
+includes the Java module from Github using the tag "1.6.0" from the github repository
+"[boxen/puppet-java/releases](https://github.com/boxen/puppet-java/releases)".  The function "github" is defined at the top of the Puppetfile
 and takes the name of the module, the version, and optional repo location:
 
     def github(name, version, options = nil)
@@ -171,7 +171,7 @@ and takes the name of the module, the version, and optional repo location:
 Now Puppet knows where to download the module from when you include it in your site.pp or mypersonal.pp file:
 
     # include the java module referenced in my Puppetfile with the line
-    # github "java",     "1.1.0"
+    # github "java",     "1.6.0"
     include java
 
 ### Hiera
