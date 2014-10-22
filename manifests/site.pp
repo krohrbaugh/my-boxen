@@ -98,9 +98,7 @@ node default {
       'cloc',
       'findutils',
       'gnu-tar',
-      'tree',
-      'rbenv-whatis',
-      'rbenv-use'
+      'tree'
     ]:
   }
 }
