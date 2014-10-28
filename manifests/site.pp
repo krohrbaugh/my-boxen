@@ -71,6 +71,14 @@ node default {
   ruby::version { '2.1.2': }
   ruby::version { '2.1.3': }
 
+  # Install Bundler for all Ruby versions
+  ruby_gem { 'bundler for all rubies':
+    gem          => 'bundler',
+    version      => '~> 1.0',
+    ruby_version => '*',
+  }
+
+
   # python
   include python
 
