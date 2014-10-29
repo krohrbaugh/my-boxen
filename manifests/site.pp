@@ -67,9 +67,7 @@ node default {
   include nodejs::v0_10
 
   # default ruby versions
-  ruby::version { '1.9.3': }
-  ruby::version { '2.1.2': }
-  ruby::version { '2.1.3': }
+  ruby::version { '2.1.4': }
 
   # Install Bundler for all Ruby versions
   ruby_gem { 'bundler for all rubies':
