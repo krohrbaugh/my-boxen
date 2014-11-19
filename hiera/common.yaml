@@ -1,7 +1,7 @@
 ---
 # See https://github.com/boxen/puppet-ruby for docs
 ruby::provider: 'chruby'
-ruby::build::ensure: 'v20141028'
+ruby::build::ensure: 'v20141113'
 
 # See https://github.com/boxen/puppet-java for docs
 java::update_version: 71
