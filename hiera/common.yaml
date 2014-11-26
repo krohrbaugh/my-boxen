@@ -9,3 +9,6 @@ java::update_version: 71
 # Support latest golang versions: https://github.com/boxen/puppet-go/pull/11
 go::chgo_source: "mattheath/chgo"
 go::chgo_version: "3f0fb76a1eea09263011e3ad7d165bc525326de7"
+
+# Hub: see https://github.com/boxen/puppet-hub for details
+hub::alias_hub_to_git: false
