@@ -116,7 +116,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-nodejs
   specs:
-    nodejs (3.8.1)
+    nodejs (4.0.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-notational_velocity
@@ -290,7 +290,7 @@ DEPENDENCIES
   keyremap4macbook (= 1.2.2)
   module_data (= 0.0.3)
   nginx (= 1.4.4)
-  nodejs (= 3.8.1)
+  nodejs (= 4.0.0)
   notational_velocity (= 1.1.2)
   onepassword (= 1.1.2)
   openssl (= 1.0.0)
