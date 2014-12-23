@@ -199,9 +199,9 @@ GITHUBTARBALL
     spotify (1.0.2)
 
 GITHUBTARBALL
-  remote: boxen/puppet-sublime_text_2
+  remote: boxen/puppet-sublime_text
   specs:
-    sublime_text_2 (1.1.2)
+    sublime_text (1.1.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-sudo
@@ -308,7 +308,7 @@ DEPENDENCIES
   spectacle (= 1.0.0)
   spotify (= 1.0.2)
   stdlib (= 4.3.2)
-  sublime_text_2 (= 1.1.2)
+  sublime_text (= 1.1.0)
   sudo (= 1.0.0)
   teamviewer (= 1.0.1)
   textmate (= 1.1.0)
