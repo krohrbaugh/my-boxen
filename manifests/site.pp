@@ -70,7 +70,7 @@ node default {
   }
 
   # default ruby versions
-  ruby::version { '2.1.5': }
+  ruby::version { '2.2.0': }
 
   # Install Bundler for all Ruby versions
   ruby_gem { 'bundler for all rubies':
