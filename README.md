@@ -65,6 +65,24 @@ cd /opt/boxen/repo
 ./script/boxen
 ```
 
+### Updating
+
+Typically, there are two aspects to updating Boxen: updating Ruby libraries in the `Gemfile` and updating Puppet modules in the `Puppetfile`.
+
+To update Ruby libraries, modify the `Gemfile` and then run `script/bootstrap`.
+
+To determine what Puppet modules are out of date, first export your Github API token, so that `librarian-puppet` can use it. Boxen stores the token in your Keychain, under "Github API Token". Find it and run:
+
+```sh
+export GITHUB_API_TOKEN={token-from-keychain}
+bundle exec librarian-puppet outdated
+```
+
+This will list the outdated Puppet modules. Update the `Puppetfile` with whatever modules you wish to update and run `boxen`.
+
+_NOTE:_ It's safest to only update modules in the optional/custom part of the
+`Puppetfile` and to pull core module updates from `upstream`.
+
 ### Distributing
 
 That's enough to get your boxen into a usable state on other machines,
@@ -105,23 +123,27 @@ Once your shell is ready, open a new tab/window in your Terminal
 and you should be able to successfully run `boxen --env`.
 If that runs cleanly, you're in good shape.
 
-### Updating
+## What You Get
 
-Typically, there are two aspects to updating Boxen: updating Ruby libraries in the `Gemfile` and updating Puppet modules in the `Puppetfile`.
+This template project provides the following by default:
 
-To update Ruby libraries, modify the `Gemfile` and then run `script/bootstrap`.
-
-To determine what Puppet modules are out of date, first export your Github API token, so that `librarian-puppet` can use it. Boxen stores the token in your Keychain, under "Github API Token". Find it and run:
-
-```sh
-export GITHUB_API_TOKEN={token-from-keychain}
-bundle exec librarian-puppet outdated
-```
-
-This will list the outdated Puppet modules. Update the `Puppetfile` with whatever modules you wish to update and run `boxen`.
-
-_NOTE:_ It's safest to only update modules in the optional/custom part of the
-`Puppetfile` and to pull core module updates from `upstream`.
+* Homebrew
+* Git
+* Hub
+* dnsmasq w/ .dev resolver for localhost
+* rbenv
+* Full Disk Encryption requirement
+* Node.js 0.6
+* Node.js 0.8
+* Node.js 0.10
+* Ruby 1.9.3
+* Ruby 2.0.0
+* Ruby 2.1.0
+* Ruby 2.1.1
+* Ruby 2.1.2
+* ack
+* Findutils
+* GNU tar
 
 ## Customizing
 
