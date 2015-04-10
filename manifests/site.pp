@@ -64,13 +64,13 @@ node default {
   }
 
   # node versions
-  nodejs::version { 'v0.10.31': }
+  nodejs::version { 'v0.12': }
   nodejs::module { 'bower':
-    node_version => 'v0.10.31'
+    node_version => 'v0.12'
   }
 
   # default ruby versions
-  ruby::version { '2.2.0': }
+  ruby::version { '2.2.1': }
 
   # Install Bundler for all Ruby versions
   ruby_gem { 'bundler for all rubies':
@@ -97,7 +97,7 @@ node default {
       before   => Repository[$go::chgo_root],
   }
 
-  go::version { '1.4': }
+  go::version { '1.4.2': }
 
   # common, useful packages
   package {
