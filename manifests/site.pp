@@ -106,6 +106,7 @@ node default {
       'cloc',
       'findutils',
       'gnu-tar',
+      'the_silver_searcher',
       'tree'
     ]:
   }
