@@ -1,4 +1,7 @@
 ---
+# Docker
+docker::version: '1.6.2'
+
 # See https://github.com/boxen/puppet-ruby for docs
 ruby::provider: 'chruby'
 ruby::build::ensure: 'v20150319zf'

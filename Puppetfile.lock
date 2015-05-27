@@ -39,6 +39,11 @@ GITHUBTARBALL
     dnsmasq (2.0.1)
 
 GITHUBTARBALL
+  remote: boxen/puppet-docker
+  specs:
+    docker (0.9.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-dropbox
   specs:
     dropbox (1.4.1)
@@ -234,6 +239,11 @@ GITHUBTARBALL
     transmit (1.0.2)
 
 GITHUBTARBALL
+  remote: boxen/puppet-virtualbox
+  specs:
+    virtualbox (1.0.13)
+
+GITHUBTARBALL
   remote: boxen/puppet-vlc
   specs:
     vlc (1.1.0)
@@ -277,6 +287,7 @@ DEPENDENCIES
   chrome (= 1.2.0)
   crashplan (= 1.0.1)
   dnsmasq (= 2.0.1)
+  docker (= 0.9.0)
   dropbox (= 1.4.1)
   firefox (= 1.2.3)
   foreman (= 1.2.0)
@@ -320,6 +331,7 @@ DEPENDENCIES
   textmate (= 1.1.0)
   tower (= 1.1.0)
   transmit (= 1.0.2)
+  virtualbox (= 1.0.13)
   vlc (= 1.1.0)
   xquartz (= 1.2.1)
   zsh (= 1.0.0)
