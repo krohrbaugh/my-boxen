@@ -4,7 +4,7 @@ docker::version: '1.6.2'
 
 # See https://github.com/boxen/puppet-ruby for docs
 ruby::provider: 'chruby'
-ruby::build::ensure: 'v20150319zf'
+ruby::build::ensure: 'v20150709'
 
 # See https://github.com/boxen/puppet-java for docs
 java::update_version: '71'
