@@ -1,7 +1,5 @@
 class people::krohrbaugh::applications::development {
 
-  include docker
-
   class { "intellij":
     edition => "ultimate",
     version => "13.1.1",
@@ -15,5 +13,11 @@ class people::krohrbaugh::applications::development {
   include sequel_pro
   include rubymine
   include tower
-  include virtualbox
+
+  class { "virtualbox":
+    version     => "5.0.0",
+    patch_level => "101573",
+  }
+
+  include docker
 }
