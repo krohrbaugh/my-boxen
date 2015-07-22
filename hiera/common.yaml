@@ -1,6 +1,6 @@
 ---
 # Docker
-docker::version: '1.7.0'
+docker::version: '1.7.1'
 
 # See https://github.com/boxen/puppet-ruby for docs
 ruby::provider: 'chruby'
