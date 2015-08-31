@@ -169,11 +169,6 @@ GITHUBTARBALL
     pkgconfig (1.0.0)
 
 GITHUBTARBALL
-  remote: boxen/puppet-python
-  specs:
-    python (2.0.0)
-
-GITHUBTARBALL
   remote: boxen/puppet-repository
   specs:
     repository (2.3.0)
@@ -259,6 +254,11 @@ GITHUBTARBALL
     zsh (1.0.0)
 
 GITHUBTARBALL
+  remote: mloberg/puppet-python
+  specs:
+    python (3.0.0)
+
+GITHUBTARBALL
   remote: ngs/puppet-kaleidoscope
   specs:
     kaleidoscope (1.0.5)
@@ -316,7 +316,7 @@ DEPENDENCIES
   pgadmin3 (= 1.0.0)
   phantomjs (= 2.3.0)
   pkgconfig (= 1.0.0)
-  python (= 2.0.0)
+  python (= 3.0.0)
   repository (= 2.3.0)
   ruby (= 8.5.0)
   rubymine (= 1.1.0)

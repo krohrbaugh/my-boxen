@@ -2,6 +2,10 @@
 # Docker
 docker::version: '1.7.1'
 
+# Python
+# See https://github.com/yyuu/pyenv for SHA; bump ensure for latest versions
+python::pyenv::ensure: 'c9268bb0dc62ffacc8dbc0e40e3da07e041ccab1'
+
 # See https://github.com/boxen/puppet-ruby for docs
 ruby::provider: 'chruby'
 ruby::build::ensure: 'v20150709'

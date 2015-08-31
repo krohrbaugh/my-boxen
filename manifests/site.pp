@@ -80,7 +80,17 @@ node default {
   }
 
   # python
-  include python
+  python::version { '2.7.10': }
+  python::version { '3.4.3': }
+
+  class { 'python::global':
+    version => '2.7.10'
+  }
+
+  python::package { "virtualenv for 2.7":
+    package => 'virtualenv',
+    python => '2.7.10'
+  }
 
   # java
   include java
