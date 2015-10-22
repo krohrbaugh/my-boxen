@@ -64,9 +64,10 @@ node default {
   }
 
   # node versions
-  nodejs::version { 'v0.12': }
-  nodejs::module { 'bower':
-    node_version => 'v0.12'
+  nodejs::version { '0.12': }
+  npm_module { "bower for v0.12":
+    module       => 'bower',
+    node_version => '0.12'
   }
 
   # default ruby versions

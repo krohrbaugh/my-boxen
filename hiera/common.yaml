@@ -1,14 +1,11 @@
 ---
-# Docker
-docker::version: '1.7.1'
-
 # Python
 # See https://github.com/yyuu/pyenv for SHA; bump ensure for latest versions
-python::pyenv::ensure: 'c9268bb0dc62ffacc8dbc0e40e3da07e041ccab1'
+python::pyenv::ensure: 'v20151006'
 
 # See https://github.com/boxen/puppet-ruby for docs
 ruby::provider: 'chruby'
-ruby::build::ensure: 'v20150709'
+ruby::build::ensure: 'v20150928'
 
 # See https://github.com/boxen/puppet-java for docs
 java::update_version: '71'
@@ -21,5 +18,8 @@ go::chgo_version: "ccea1aaaaf58d5f4c10a6330555086e499937517"
 hub::alias_hub_to_git: false
 
 # Node: see https://github.com/boxen/puppet-nodejs for docs
+"nodejs::build::ensure": "a400214bd9e49cc7dac61c19e405901382476863"
+"nodejs::nodenv::ensure": "v0.4.0"
 "nodejs::version::alias":
-  "v0.12": "v0.12.2"
+  "0.12": "0.12.7"
+

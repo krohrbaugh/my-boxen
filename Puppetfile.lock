@@ -6,7 +6,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-alfred
   specs:
-    alfred (1.4.0)
+    alfred (1.5.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-appcleaner
@@ -41,7 +41,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-docker
   specs:
-    docker (0.9.0)
+    docker (1.0.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-dropbox
@@ -101,17 +101,17 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-iterm2
   specs:
-    iterm2 (1.2.4)
+    iterm2 (1.2.5)
 
 GITHUBTARBALL
   remote: boxen/puppet-java
   specs:
-    java (1.8.2)
+    java (1.8.4)
 
 GITHUBTARBALL
   remote: boxen/puppet-karabiner
   specs:
-    karabiner (1.0.7)
+    karabiner (1.0.8)
 
 GITHUBTARBALL
   remote: boxen/puppet-keyremap4macbook
@@ -256,7 +256,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: mloberg/puppet-python
   specs:
-    python (3.0.0)
+    python (3.0.1)
 
 GITHUBTARBALL
   remote: ngs/puppet-kaleidoscope
@@ -280,14 +280,14 @@ GITHUBTARBALL
 
 DEPENDENCIES
   adium (= 1.4.0)
-  alfred (= 1.4.0)
+  alfred (= 1.5.0)
   appcleaner (= 1.0.0)
   boxen (= 3.11.0)
   brewcask (= 0.0.6)
   chrome (= 1.2.0)
   crashplan (= 1.0.1)
   dnsmasq (= 2.0.1)
-  docker (= 0.9.0)
+  docker (= 1.0.0)
   dropbox (= 1.4.1)
   firefox (= 1.2.3)
   foreman (= 1.2.0)
@@ -300,10 +300,10 @@ DEPENDENCIES
   inifile (= 1.4.1)
   intellij (= 1.5.1)
   istatmenus4 (= 1.1.0)
-  iterm2 (= 1.2.4)
-  java (= 1.8.2)
+  iterm2 (= 1.2.5)
+  java (= 1.8.4)
   kaleidoscope (= 1.0.5)
-  karabiner (= 1.0.7)
+  karabiner (= 1.0.8)
   keyremap4macbook (= 1.2.2)
   module_data (= 0.0.4)
   nginx (= 1.4.6)
@@ -316,7 +316,7 @@ DEPENDENCIES
   pgadmin3 (= 1.0.0)
   phantomjs (= 3.0.0)
   pkgconfig (= 1.0.0)
-  python (= 3.0.0)
+  python (= 3.0.1)
   repository (= 2.4.1)
   ruby (= 8.5.2)
   rubymine (= 1.1.0)
