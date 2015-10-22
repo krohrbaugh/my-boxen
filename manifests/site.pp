@@ -109,7 +109,7 @@ node default {
       before   => Repository[$go::chgo_root],
   }
 
-  go::version { '1.4.2': }
+  go::version { '1.5.1': }
 
   # common, useful packages
   package {
