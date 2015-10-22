@@ -83,7 +83,7 @@ node default {
 
   # python
   python::version { '2.7.10': }
-  python::version { '3.4.3': }
+  python::version { '3.5.0': }
 
   class { 'python::global':
     version => '2.7.10'
