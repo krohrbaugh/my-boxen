@@ -104,11 +104,6 @@ GITHUBTARBALL
     iterm2 (1.2.5)
 
 GITHUBTARBALL
-  remote: boxen/puppet-java
-  specs:
-    java (1.8.4)
-
-GITHUBTARBALL
   remote: boxen/puppet-karabiner
   specs:
     karabiner (1.0.8)
@@ -256,7 +251,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: mloberg/puppet-python
   specs:
-    python (3.0.1)
+    python (3.0.2)
 
 GITHUBTARBALL
   remote: ngs/puppet-kaleidoscope
@@ -301,7 +296,6 @@ DEPENDENCIES
   intellij (= 1.5.1)
   istatmenus4 (= 1.1.0)
   iterm2 (= 1.2.5)
-  java (= 1.8.4)
   kaleidoscope (= 1.0.5)
   karabiner (= 1.0.8)
   keyremap4macbook (= 1.2.2)
@@ -316,7 +310,7 @@ DEPENDENCIES
   pgadmin3 (= 1.0.0)
   phantomjs (= 3.0.0)
   pkgconfig (= 1.0.0)
-  python (= 3.0.1)
+  python (= 3.0.2)
   repository (= 2.4.1)
   ruby (= 8.5.3)
   rubymine (= 1.1.0)

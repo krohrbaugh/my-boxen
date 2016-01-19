@@ -53,6 +53,7 @@ Homebrew::Formula <| |> -> Package <| |>
 
 node default {
   # core modules, needed for most things
+  include brewcask
   include dnsmasq
   include git
   include hub
@@ -64,7 +65,8 @@ node default {
   }
 
   # node versions
-  nodejs::version { '4.2.1': }
+  nodejs::version { '5.4.1': }
+  nodejs::version { '4.2.4': }
   nodejs::version { '0.12': }
   npm_module { 'bower for v0.12':
     module       => 'bower',
@@ -72,7 +74,7 @@ node default {
   }
 
   # default ruby versions
-  ruby::version { '2.2.3': }
+  ruby::version { '2.3.0': }
 
   # Install Bundler for all Ruby versions
   ruby_gem { 'bundler for all rubies':
@@ -95,7 +97,8 @@ node default {
   }
 
   # java
-  include java
+  package { 'java': provider => 'brewcask' }
+  package { 'jenv': }
 
   # go
   include go
