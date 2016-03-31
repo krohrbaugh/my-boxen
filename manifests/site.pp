@@ -65,8 +65,13 @@ node default {
   }
 
   # node versions
+<<<<<<< HEAD
   nodejs::version { '5.4.1': }
   nodejs::version { '4.2.4': }
+=======
+  nodejs::version { '4.4.1': }
+  nodejs::version { '5.9.1': }
+>>>>>>> Upgrade node
   nodejs::version { '0.12': }
   npm_module { 'bower for v0.12':
     module       => 'bower',

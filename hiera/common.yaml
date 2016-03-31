@@ -18,7 +18,7 @@ go::chgo_version: "ccea1aaaaf58d5f4c10a6330555086e499937517"
 hub::alias_hub_to_git: false
 
 # Node: see https://github.com/boxen/puppet-nodejs for docs
-"nodejs::build::ensure": "ab2d28ea1026aadbeac235fe5988b617b5ef8996"
+"nodejs::build::ensure": "1db065ce6207c5402870cbf228cd817f51b30e1b"
 "nodejs::nodenv::ensure": "v1.0.0"
 "nodejs::version::alias":
   "0.12": "0.12.7"
