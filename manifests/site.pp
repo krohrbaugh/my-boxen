@@ -65,7 +65,9 @@ node default {
   }
 
   # node versions
-  nodejs::version { '4.4.1': }
+  class { 'nodejs::global':
+    version => '4.4.1'
+  }
   nodejs::version { '5.9.1': }
   nodejs::version { '0.12': }
   npm_module { 'bower for v0.12':
