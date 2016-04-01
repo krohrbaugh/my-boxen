@@ -99,7 +99,7 @@ node default {
   }
 
   # java
-  package { 'java': provider => 'brewcask' }
+  include java
   package { 'jenv': }
 
   # go
