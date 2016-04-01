@@ -171,7 +171,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-ruby
   specs:
-    ruby (8.5.3)
+    ruby (8.5.4)
 
 GITHUBTARBALL
   remote: boxen/puppet-rubymine
@@ -312,12 +312,16 @@ DEPENDENCIES
   pkgconfig (= 1.0.0)
   python (= 3.0.2)
   repository (= 2.4.1)
+<<<<<<< HEAD
   ruby (= 8.5.3)
   rubymine (= 1.1.0)
   sequel_pro (= 1.0.1)
   skype (= 1.1.0)
   spectacle (= 1.0.0)
   spotify (= 1.0.2)
+=======
+  ruby (= 8.5.4)
+>>>>>>> upstream/master
   stdlib (= 4.7.0)
   sublime_text (= 1.1.0)
   sudo (= 1.0.0)

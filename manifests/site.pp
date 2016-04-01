@@ -76,6 +76,7 @@ node default {
   }
 
   # default ruby versions
+<<<<<<< HEAD
   ruby::version { '2.3.0': }
 
   # Install Bundler for all Ruby versions
