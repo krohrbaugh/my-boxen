@@ -1,5 +1,5 @@
 class people::krohrbaugh::applications::browsers {
-  include chrome
-  include firefox
-  include opera
+  package { 'google-chrome': provider => 'brewcask' }
+  package { 'firefox': provider => 'brewcask' }
+  package { 'opera': provider => 'brewcask' }
 }

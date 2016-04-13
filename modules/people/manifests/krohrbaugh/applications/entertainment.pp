@@ -1,4 +1,4 @@
 class people::krohrbaugh::applications::entertainment {
-  include spotify
-  include vlc
+  package { 'spotify': provider => 'brewcask' }
+  package { 'vlc': provider => 'brewcask' }
 }

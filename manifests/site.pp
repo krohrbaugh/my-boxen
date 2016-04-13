@@ -8,9 +8,6 @@ Exec {
   user        => $boxen_user,
 
   path => [
-    "${boxen::config::home}/rbenv/shims",
-    "${boxen::config::home}/rbenv/bin",
-    "${boxen::config::home}/rbenv/plugins/ruby-build/bin",
     "${boxen::config::homebrewdir}/bin",
     '/usr/bin',
     '/bin',
@@ -22,6 +19,13 @@ Exec {
     "HOMEBREW_CACHE=${homebrew::config::cachedir}",
     "HOME=/Users/${::boxen_user}"
   ]
+}
+
+file { '/usr/local/bin':
+  ensure    => 'directory',
+  owner     => $boxen_user,
+  group     => 'staff',
+  mode      => '0755'
 }
 
 File {

@@ -1,10 +1,8 @@
 class people::krohrbaugh::applications::utilities {
-  include alfred
-  include appcleaner
-  include crashplan
-  include istatmenus4
-  include notational_velocity::nvalt
-  include onepassword
-  include spectacle
-  include transmit
+  package { 'alfred': provider => 'brewcask' }
+  package { 'appcleaner': provider => 'brewcask' }
+  package { 'crashplan': provider => 'brewcask' }
+  package { '1password': provider => 'brewcask' }
+  package { 'spectacle': provider => 'brewcask' }
+  package { 'transmit': provider => 'brewcask' }
 }
