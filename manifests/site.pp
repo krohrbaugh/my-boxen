@@ -70,17 +70,12 @@ node default {
 
   # node versions
   class { 'nodejs::global':
-    version => '4.4.1'
+    version => '4.6'
   }
-  nodejs::version { '5.9.1': }
-  nodejs::version { '0.12': }
-  npm_module { 'bower for v0.12':
-    module       => 'bower',
-    node_version => '0.12'
-  }
+  nodejs::version { '6.8.0': }
 
   # default ruby versions
-  ruby::version { '2.3.0': }
+  ruby::version { '2.3.1': }
 
   # Install Bundler for all Ruby versions
   ruby_gem { 'bundler for all rubies':
@@ -90,16 +85,16 @@ node default {
   }
 
   # python
-  python::version { '2.7.10': }
-  python::version { '3.5.0': }
+  python::version { '2.7.12': }
+  python::version { '3.5.2': }
 
   class { 'python::global':
-    version => '2.7.10'
+    version => '2.7.12'
   }
 
   python::package { "virtualenv for 2.7":
     package => 'virtualenv',
-    python => '2.7.10'
+    python => '2.7.12'
   }
 
   # java
@@ -118,7 +113,7 @@ node default {
       before   => Repository[$go::chgo_root],
   }
 
-  go::version { '1.5.1': }
+  go::version { '1.7.1': }
 
   # common, useful packages
   package {

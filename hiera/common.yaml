@@ -1,14 +1,14 @@
 ---
 # Python
 # See https://github.com/yyuu/pyenv for SHA; bump ensure for latest versions
-python::pyenv::ensure: 'v20151006'
+python::pyenv::ensure: 'v20160726'
 
 # See https://github.com/boxen/puppet-ruby for docs
 ruby::provider: 'chruby'
-ruby::build::ensure: 'v20160111'
+ruby::build::ensure: 'v20160913'
 
 # See https://github.com/boxen/puppet-java for docs
-java::update_version: '71'
+java::update_version: '80'
 
 # Support latest golang versions: https://github.com/boxen/puppet-go/pull/11
 go::chgo_source: "mattheath/chgo"
@@ -18,9 +18,8 @@ go::chgo_version: "ccea1aaaaf58d5f4c10a6330555086e499937517"
 hub::alias_hub_to_git: false
 
 # Node: see https://github.com/boxen/puppet-nodejs for docs
-"nodejs::build::ensure": "1db065ce6207c5402870cbf228cd817f51b30e1b"
+"nodejs::build::ensure": "fb7ea7769cd2510953e5c315b5c34c6eaf96f576"
 "nodejs::nodenv::ensure": "v1.0.0"
 "nodejs::version::alias":
-  "0.12": "0.12.7"
-  "4.2": "4.2.4"
+  "4.6": "4.6.0"
 

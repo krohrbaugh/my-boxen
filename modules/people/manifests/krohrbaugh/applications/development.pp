@@ -1,4 +1,5 @@
 class people::krohrbaugh::applications::development {
+  package { 'java': provider => 'brewcask' }
   package { 'kaleidoscope': provider => 'brewcask' }
   package { 'pgadmin3': provider => 'brewcask' }
   package { 'sequel-pro': provider => 'brewcask' }
