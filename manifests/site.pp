@@ -85,16 +85,22 @@ node default {
   }
 
   # python
-  python::version { '2.7.12': }
-  python::version { '3.5.2': }
+  $py2_version = '2.7.12'
+  $py3_version = '3.5.2'
+  python::version { "${py2_version}": }
+  python::version { "${py3_version}": }
 
   class { 'python::global':
-    version => '2.7.12'
+    version => $py2_version
   }
 
-  python::package { "virtualenv for 2.7":
+  python::package { "virtualenv for ${py2_version}":
     package => 'virtualenv',
-    python => '2.7.12'
+    python => $py2_version
+  }
+  python::package { "yolk for ${py2_version}":
+    package => 'yolk',
+    python => $py2_version
   }
 
   # java
