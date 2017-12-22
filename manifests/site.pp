@@ -72,7 +72,8 @@ node default {
   class { 'nodejs::global':
     version => '4.6'
   }
-  nodejs::version { '6.8.0': }
+  nodejs::version { '8.9.3': }
+  nodejs::version { '9.3.0': }
 
   # default ruby versions
   ruby::version { '2.3.1': }
