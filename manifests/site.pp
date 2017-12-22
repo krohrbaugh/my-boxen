@@ -1,6 +1,6 @@
 require boxen::environment
 require homebrew
-require gcc
+/* require gcc */
 
 Exec {
   group       => 'staff',
@@ -76,7 +76,7 @@ node default {
   nodejs::version { '9.3.0': }
 
   # default ruby versions
-  ruby::version { '2.3.1': }
+  ruby::version { '2.4.1': }
 
   # Install Bundler for all Ruby versions
   ruby_gem { 'bundler for all rubies':

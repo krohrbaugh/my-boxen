@@ -1,17 +1,17 @@
 GITHUBTARBALL
   remote: boxen/puppet-boxen
   specs:
-    boxen (3.11.1)
+    boxen (3.13.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-brewcask
   specs:
-    brewcask (0.0.7)
+    brewcask (0.0.10)
 
 GITHUBTARBALL
   remote: boxen/puppet-dnsmasq
   specs:
-    dnsmasq (2.0.1)
+    dnsmasq (2.0.4)
 
 GITHUBTARBALL
   remote: boxen/puppet-foreman
@@ -19,14 +19,9 @@ GITHUBTARBALL
     foreman (1.2.0)
 
 GITHUBTARBALL
-  remote: boxen/puppet-gcc
-  specs:
-    gcc (3.0.2)
-
-GITHUBTARBALL
   remote: boxen/puppet-git
   specs:
-    git (2.10.0)
+    git (2.13.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-go
@@ -36,12 +31,12 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-homebrew
   specs:
-    homebrew (2.0.2)
+    homebrew (2.2.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-hub
   specs:
-    hub (1.4.3)
+    hub (1.4.5)
 
 GITHUBTARBALL
   remote: boxen/puppet-iterm2
@@ -61,12 +56,12 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-nginx
   specs:
-    nginx (1.7.0)
+    nginx (1.9.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-nodejs
   specs:
-    nodejs (5.0.0)
+    nodejs (5.0.9)
 
 GITHUBTARBALL
   remote: boxen/puppet-openssl
@@ -96,7 +91,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-ruby
   specs:
-    ruby (8.5.4)
+    ruby (8.6.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-sublime_text
@@ -144,29 +139,28 @@ GITHUBTARBALL
     module_data (0.0.4)
 
 DEPENDENCIES
-  boxen (= 3.11.1)
-  brewcask (= 0.0.7)
-  dnsmasq (= 2.0.1)
+  boxen (= 3.13.0)
+  brewcask (= 0.0.10)
+  dnsmasq (= 2.0.4)
   foreman (= 1.2.0)
-  gcc (= 3.0.2)
-  git (= 2.10.0)
+  git (= 2.13.0)
   go (= 2.1.0)
-  homebrew (= 2.0.2)
-  hub (= 1.4.3)
+  homebrew (= 2.2.0)
+  hub (= 1.4.5)
   inifile (= 1.4.1)
   iterm2 (= 1.2.5)
   java (= 1.8.4)
   karabiner (= 1.0.8)
   module_data (= 0.0.4)
-  nginx (= 1.7.0)
-  nodejs (= 5.0.0)
+  nginx (= 1.9.0)
+  nodejs (= 5.0.9)
   openssl (= 1.0.0)
   osx (= 2.8.0)
   phantomjs (= 3.0.0)
   pkgconfig (= 1.0.0)
   python (= 3.1.0)
   repository (= 2.4.1)
-  ruby (= 8.5.4)
+  ruby (= 8.6.0)
   stdlib (= 4.7.0)
   sublime_text (= 1.1.1)
   sudo (= 1.0.0)
